@@ -1,0 +1,1 @@
+Error: ENOENT: no such file or directory, rename 'C:\Users\GC\AppData\Local\Temp\QSSasu5PZK4uTHC7J2M5RThj.jpg' -> 'C:\Users\GC\Downloads\taxi_driver_node-main\public\img\profile\202510181535113511uAzU8lyz5A.jpg'

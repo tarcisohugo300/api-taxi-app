@@ -1,0 +1,7 @@
+UPDATE `user_cars` AS `ucd` 
+                    INNER JOIN `user_detail` AS `ud` ON `ucd`.`user_id` = `ud`.`user_id` 
+                    INNER JOIN `car_series` AS `cs` ON `cs`.`series_id` = `ucd`.`series_id` 
+                    INNER JOIN `car_model` AS `cm` ON `cs`.`model_id` = `cm`.`model_id` 
+                    INNER JOIN `car_brand` AS  `cb` ON `cb`.`brand_id` = `cs`.`brand_id` 
+                    SET `ud`.`car_id` = `ucd`.`user_car_id`, `ud`.`seat` = `cm`.`seat` 
+                    WHERE `ucd`.`user_car_id` = 8 AND `ucd`.`user_id` = 13 AND `ucd`.`status` = 1

@@ -1,0 +1,11 @@
+TypeError: Cannot read properties of undefined (reading 'user_type')
+    at C:\Users\GC\Desktop\final\yellow_api\controllers\login_controller.js:1086:56
+    at Query.<anonymous> (C:\Users\GC\Desktop\final\yellow_api\helpers\db_helpers.js:67:24)
+    at Query.<anonymous> (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\Connection.js:526:10)
+    at Query._callback (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\protocol\sequences\Query.js:149:8)
+    at Query.EofPacket (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\protocol\sequences\Query.js:133:8)
+    at Protocol._parsePacket (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\GC\Desktop\final\yellow_api\node_modules\mysql\lib\protocol\Parser.js:43:10)

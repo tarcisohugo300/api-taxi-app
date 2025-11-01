@@ -1,0 +1,1 @@
+SELECT zl.zone_id, zl.zone_name FROM zone_list AS zl INNER JOIN price_detail AS pd ON pd.zone_id = zl.zone_id AND pd.status = 1 INNER JOIN service_detail AS sd ON sd.service_id = pd.service_id AND sd.status = 1 AND zl.status = 1 GROUP BY zl.zone_id ;
