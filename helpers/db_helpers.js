@@ -1,15 +1,14 @@
 var mysql = require('mysql')
 var config = require('config')
-var dbConfig = config.get('dbConfig')
+const baseConfig = config.get("dbConfig");
 
+// Creamos una copia modificable, sin romper la inmutabilidad del objeto `config`
 const dbConfig = {
-  host: process.env.DB_HOST || configData.host || 'localhost',
-  user: process.env.DB_USER || configData.user,
-  password: process.env.DB_PASSWORD || configData.password,
-  database: process.env.DB_DATABASE || configData.database,
-  multipleStatements: configData.multipleStatements,
-  timezone: configData.timezone,
-  charset: configData.charset
+  host: process.env.DB_HOST || baseConfig.host,
+  user: process.env.DB_USER || baseConfig.user,
+  password: process.env.DB_PASSWORD || baseConfig.password,
+  database: process.env.DB_DATABASE || baseConfig.database,
+  port: process.env.DB_PORT || baseConfig.port || 3306,
 };
 var db = mysql.createConnection(dbConfig);
 var helper = require('./helpers')
