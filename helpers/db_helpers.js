@@ -1,6 +1,11 @@
 var mysql = require('mysql')
 var config = require('config')
 var dbConfig = config.get('dbConfig')
+
+dbConfig.host = process.env.DB_HOST || dbConfig.host || 'localhost';
+dbConfig.user = process.env.DB_USER || dbConfig.user;
+dbConfig.password = process.env.DB_PASSWORD || dbConfig.password;
+dbConfig.database = process.env.DB_DATABASE || dbConfig.database;
 var db = mysql.createConnection(dbConfig);
 var helper = require('./helpers')
 
